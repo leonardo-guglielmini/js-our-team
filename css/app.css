@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+html {
+    font-family: "Figtree", sans-serif;
+    font-style: normal;
+}

@@ -36,3 +36,11 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const teamList = document.getElementById("team-list");
+
+function displayListMembers(list, parentEl) {
+}
+
+displayListMembers(teamMembers, teamList);
+
