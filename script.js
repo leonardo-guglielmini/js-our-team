@@ -121,7 +121,7 @@ function displayListMembers(list, parentEl) {
     outerCol4El.appendChild(innerRowEl);
 
     outerRowEl.appendChild(outerCol4El);
-    console.log(list[i]);
+    //console.log(list[i]);
   }
   parentEl.appendChild(outerRowEl);
 }
