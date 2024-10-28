@@ -89,28 +89,45 @@ function displayListMembers(list, parentEl) {
     //   ulEl.appendChild(liEl);
     // }
 
-    for (key in list[i]) {
-      if (key === "img") {
-        continue;
-      }
+    // for (key in list[i]) {
+    //   if (key === "img") {
+    //     continue;
+    //   }
 
-      let tempEl;
+    //   let tempEl;
 
-      if (key === "name") {
-        tempEl = document.createElement("h1");
-        tempEl.classList.add("fw-bold", "fs-4", "pt-2");
-      } else if (key === "role") {
-        tempEl = document.createElement("p");
-        tempEl.classList.add("mb-1");
-      } else {
-        tempEl = document.createElement("a");
-        tempEl.href = "#";
-        tempEl.classList.add("text-primary")
-      }
-      tempEl.textContent = list[i][key];
-      innerCol9El.appendChild(tempEl);
+    //   if (key === "name") {
+    //     tempEl = document.createElement("h1");
+    //     tempEl.classList.add("fw-bold", "fs-4", "pt-2");
+    //   } else if (key === "role") {
+    //     tempEl = document.createElement("p");
+    //     tempEl.classList.add("mb-1");
+    //   } else {
+    //     tempEl = document.createElement("a");
+    //     tempEl.href = "#";
+    //     tempEl.classList.add("text-primary")
+    //   }
+    //   tempEl.textContent = list[i][key];
+    //   innerCol9El.appendChild(tempEl);
+    // }
 
-    }
+    let nameEl = document.createElement("h1");
+    nameEl.classList.add("fw-bold", "fs-4", "pt-2");
+    nameEl.textContent = list[i].name;
+
+    const roleEl = document.createElement("p");
+    roleEl.classList.add("mb-1");
+    roleEl.textContent = list[i].role;
+
+    const emailEl = document.createElement("a");
+    emailEl.classList.add("text-primary");
+    emailEl.href = "#";
+    emailEl.textContent = list[i].email;
+
+
+    innerCol9El.appendChild(nameEl);
+    innerCol9El.appendChild(roleEl);
+    innerCol9El.appendChild(emailEl);
 
     innerCol3El.appendChild(imgEl);
     //innerCol9El.appendChild(ulEl);
